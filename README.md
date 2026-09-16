@@ -1,3 +1,4 @@
 # Hotel
-This is my first git repository
-Author name chandani gupt
+This is my first git Repository
+<br>
+Author Name chandani gupt
