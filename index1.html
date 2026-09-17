@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Royal Residency | Hotel in Maharajganj, Uttar Pradesh</title>
+    <meta name="description"
+        content="Hotel Royal Residency Maharajganj offers comfortable rooms, modern amenities, delicious dining and warm hospitality in Uttar Pradesh. Book your luxury stay now.">
+    <meta name="keywords"
+        content="Hotel Royal Residency, Maharajganj Hotel, Uttar Pradesh Luxury Hotel, Hotel Booking Maharajganj">
+
+    <!-- Open Graph Metadata -->
+    <meta property="og:title" content="Hotel Royal Residency | Luxury Stay in Maharajganj">
+    <meta property="og:description"
+        content="Experience comfort, luxury, and warm hospitality at Hotel Royal Residency, Maharajganj.">
+    <meta property="og:type" content="website">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..800;1,400..800&family=Poppins:wght@300;400;500;600;700&display=swap"rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header class="header" id="header">
+        <div class="container navbar">
+            <a href="#home" class="logo">
+                <i class="fa-solid fa-crown"></i>
+                <div class="logo-text">
+                    <span class="brand-title">HOTEL ROYAL RESIDENCY</span>
+                    <span class="brand-sub">Maharajganj</span>
+                </div>
+            </a>
+
+            <nav>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="#home" class="active">Home</a></li>
+                    <li><a href="#rooms">Rooms</a></li>
+                    <li><a href="#facilities">Facilities</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#location">Location</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div style="display: flex; align-items: center; gap: 15px;">
+                <button class="btn-gold" onclick="openBookingModal('General')">Book Now</button>
+                <div class="hamburger" id="hamburger"><i class="fa-solid fa-bars"></i></div>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <span class="subtitle-gold" style="color: var(--gold-light);">WELCOME TO</span>
+                <h1 class="hero-title">Hotel Royal Residency Maharajganj</h1>
+                <p class="hero-subtitle">Your Comfort, Our Priority</p>
+                <p class="hero-description">Experience a perfect blend of comfort, luxury and warm hospitality in the
+                    heart of Maharajganj, Uttar Pradesh.</p>
+
+                <div class="hero-features">
+                    <div class="feature-chip"><i class="fa-solid fa-bed"></i> Comfortable Rooms</div>
+                    <div class="feature-chip"><i class="fa-solid fa-utensils"></i> Delicious Cuisine</div>
+                    <div class="feature-chip"><i class="fa-solid fa-wifi"></i> Free Wi-Fi</div>
+                    <div class="feature-chip"><i class="fa-solid fa-location-dot"></i> Prime Location</div>
+                </div>
+
+                <a href="#rooms" class="btn-gold">Book Your Stay <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <div class="container booking-search-wrapper">
+        <div class="booking-card">
+            <form class="booking-form" id="searchAvailabilityForm" onsubmit="handleAvailabilitySearch(event)">
+                <div class="form-group">
+                    <label><i class="fa-solid fa-calendar-days"></i> Check In</label>
+                    <input type="date" id="checkInDate" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label><i class="fa-solid fa-calendar-days"></i> Check Out</label>
+                    <input type="date" id="checkOutDate" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label><i class="fa-solid fa-user-group"></i> Guests</label>
+                    <select id="guestCount" class="form-control">
+                        <option value="1 Room, 1 Adult">1 Room, 1 Adult</option>
+                        <option value="1 Room, 2 Adults" selected>1 Room, 2 Adults</option>
+                        <option value="1 Room, 3 Adults">1 Room, 3 Adults</option>
+                        <option value="2 Rooms, 4 Adults">2 Rooms, 4 Adults</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn-gold" style="height: 48px; margin-top: auto;">Check
+                    Availability</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="services-strip">
+        <div class="container">
+            <div class="services-grid">
+                <div class="service-item">
+                    <div class="service-icon"><i class="fa-solid fa-clock"></i></div>
+                    <div class="service-info">
+                        <h4>24/7 Front Desk</h4>
+                        <p>Always here to assist you</p>
+                    </div>
+                </div>
+                <div class="service-item">
+                    <div class="service-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                    <div class="service-info">
+                        <h4>Safe & Secure</h4>
+                        <p>Your safety is our priority</p>
+                    </div>
+                </div>
+                <div class="service-item">
+                    <div class="service-icon"><i class="fa-solid fa-utensils"></i></div>
+                    <div class="service-info">
+                        <h4>Multi-Cuisine Restaurant</h4>
+                        <p>Taste the best flavors</p>
+                    </div>
+                </div>
+                <div class="service-item">
+                    <div class="service-icon"><i class="fa-solid fa-square-parking"></i></div>
+                    <div class="service-info">
+                        <h4>Free Parking</h4>
+                        <p>Hassle-free parking facility</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="section-padding" id="rooms">
+        <div class="container">
+            <div class="rooms-header">
+                <div>
+                    <span class="subtitle-gold">OUR ROOMS</span>
+                    <h2 class="section-heading">Comfortable Stays, Memorable Experiences</h2>
+                    <p class="section-description">Choose from our well-appointed rooms designed for your ultimate
+                        comfort and relaxation.</p>
+                </div>
+                <a href="#rooms" class="btn-outline-gold">View All Rooms <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+
+            <div class="rooms-grid">
+                <!-- Room 1 -->
+                <div class="room-card">
+                    <div class="room-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=600&q=80"
+                            alt="Deluxe Room">
+                    </div>
+                    <div class="room-details">
+                        <h3 class="room-title">Deluxe Room</h3>
+                        <p class="room-desc">Spacious and elegant rooms equipped with contemporary modern amenities.</p>
+                        <div class="room-meta">
+                            <span><i class="fa-solid fa-bed"></i> King Bed</span>
+                            <span><i class="fa-solid fa-user-group"></i> 2 Guests</span>
+                        </div>
+                        <div class="room-footer">
+                            <div class="room-price">₹2,500 <span>/ night</span></div>
+                            <button class="btn-outline-gold" onclick="openBookingModal('Deluxe Room')">Book Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Room 2 -->
+                <div class="room-card">
+                    <div class="room-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=600&q=80"
+                            alt="Executive Room">
+                    </div>
+                    <div class="room-details">
+                        <h3 class="room-title">Executive Room</h3>
+                        <p class="room-desc">More space, enhanced comfort, and fine aesthetic finishes for your stay.
+                        </p>
+                        <div class="room-meta">
+                            <span><i class="fa-solid fa-bed"></i> King Bed</span>
+                            <span><i class="fa-solid fa-user-group"></i> 3 Guests</span>
+                        </div>
+                        <div class="room-footer">
+                            <div class="room-price">₹3,500 <span>/ night</span></div>
+                            <button class="btn-outline-gold" onclick="openBookingModal('Executive Room')">Book
+                                Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Room 3 -->
+                <div class="room-card">
+                    <div class="room-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=600&q=80"
+                            alt="Suite Room">
+                    </div>
+                    <div class="room-details">
+                        <h3 class="room-title">Suite Room</h3>
+                        <p class="room-desc">Premium space with a separate plush living area for work and leisure.</p>
+                        <div class="room-meta">
+                            <span><i class="fa-solid fa-bed"></i> King Bed</span>
+                            <span><i class="fa-solid fa-user-group"></i> 4 Guests</span>
+                        </div>
+                        <div class="room-footer">
+                            <div class="room-price">₹5,500 <span>/ night</span></div>
+                            <button class="btn-outline-gold" onclick="openBookingModal('Suite Room')">Book Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Room 4 -->
+                <div class="room-card">
+                    <div class="room-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1566665797739-1674de7a421a?auto=format&fit=crop&w=600&q=80"
+                            alt="Family Room">
+                    </div>
+                    <div class="room-details">
+                        <h3 class="room-title">Family Room</h3>
+                        <p class="room-desc">Perfect layout and cozy atmosphere designed for families and group stays.
+                        </p>
+                        <div class="room-meta">
+                            <span><i class="fa-solid fa-bed"></i> 2 Queen Beds</span>
+                            <span><i class="fa-solid fa-user-group"></i> 4 Guests</span>
+                        </div>
+                        <div class="room-footer">
+                            <div class="room-price">₹4,500 <span>/ night</span></div>
+                            <button class="btn-outline-gold" onclick="openBookingModal('Family Room')">Book Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding why-us">
+        <div class="container">
+            <div class="why-us-grid">
+                <div class="why-main-img">
+                    <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=800&q=80"
+                        alt="Restaurant & Dining">
+                </div>
+
+                <div class="why-us-content">
+                    <span class="subtitle-gold">WHY CHOOSE US?</span>
+                    <h2 class="section-heading">A Home Away From Home</h2>
+                    <p style="color: var(--text-muted); font-size: 0.95rem;">Hotel Royal Residency, Maharajganj offers
+                        modern amenities, spacious rooms and a warm atmosphere for a relaxing stay. Whether you are here
+                        for business or leisure, we ensure your stay is comfortable and memorable.</p>
+
+                    <div class="checklist">
+                        <div class="checklist-item"><i class="fa-solid fa-check"></i> Elegant & well-furnished rooms
+                        </div>
+                        <div class="checklist-item"><i class="fa-solid fa-check"></i> On-site restaurant with delicious
+                            food</div>
+                        <div class="checklist-item"><i class="fa-solid fa-check"></i> Conference & meeting facilities
+                        </div>
+                        <div class="checklist-item"><i class="fa-solid fa-check"></i> Close to local attractions &
+                            transport</div>
+                    </div>
+                </div>
+
+                <div class="why-stacked-imgs">
+                    <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=600&q=80"
+                        alt="Fine Dining">
+                    <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=600&q=80"
+                        alt="Reception Desk">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding" id="facilities">
+        <div class="container" style="text-align: center;">
+            <span class="subtitle-gold">PREMIUM AMENITIES</span>
+            <h2 class="section-heading">Everything You Need for a Comfortable Stay</h2>
+
+            <div class="facilities-grid">
+                <div class="facility-card">
+                    <div class="facility-icon-wrap"><i class="fa-solid fa-wifi"></i></div>
+                    <h3>Free Wi-Fi</h3>
+                    <p>High-speed internet access throughout the premises.</p>
+                </div>
+                <div class="facility-card">
+                    <div class="facility-icon-wrap"><i class="fa-solid fa-swimming-pool"></i></div>
+                    <h3>Swimming Pool</h3>
+                    <p>Clean and outdoor refreshing pool area.</p>
+                </div>
+                <div class="facility-card">
+                    <div class="facility-icon-wrap"><i class="fa-solid fa-utensils"></i></div>
+                    <h3>Restaurant</h3>
+                    <p>Multi-cuisine dining offering mouth-watering food.</p>
+                </div>
+                <div class="facility-card">
+                    <div class="facility-icon-wrap"><i class="fa-solid fa-bell-concierge"></i></div>
+                    <h3>Room Service</h3>
+                    <p>Prompt round-the-clock room dining service.</p>
+                </div>
+                <div class="facility-card">
+                    <div class="facility-icon-wrap"><i class="fa-solid fa-square-parking"></i></div>
+                    <h3>Free Parking</h3>
+                    <p>Spacious, safe, and secure vehicle parking.</p>
+                </div>
+                <div class="facility-card">
+                    <div class="facility-icon-wrap"><i class="fa-solid fa-users"></i></div>
+                    <h3>Conference Hall</h3>
+                    <p>Fully organized corporate setup & event space.</p>
+                </div>
+                <div class="facility-card">
+                    <div class="facility-icon-wrap"><i class="fa-solid fa-headset"></i></div>
+                    <h3>24/7 Reception</h3>
+                    <p>Friendly staff available anytime for assistance.</p>
+                </div>
+                <div class="facility-card">
+                    <div class="facility-icon-wrap"><i class="fa-solid fa-broom"></i></div>
+                    <h3>Housekeeping</h3>
+                    <p>Daily cleaning and maintenance for hygienic stay.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding" id="gallery" style="background-color: var(--bg-white);">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 30px;">
+                <span class="subtitle-gold">PHOTO GALLERY</span>
+                <h2 class="section-heading">Take a Tour of Our Hotel</h2>
+            </div>
+
+            <div class="gallery-filter">
+                <button class="filter-btn active" onclick="filterGallery('all', this)">All</button>
+                <button class="filter-btn" onclick="filterGallery('rooms', this)">Rooms</button>
+                <button class="filter-btn" onclick="filterGallery('dining', this)">Dining</button>
+                <button class="filter-btn" onclick="filterGallery('facility', this)">Facilities</button>
+            </div>
+
+            <div class="gallery-grid" id="galleryGrid">
+                <div class="gallery-item" data-category="facility" onclick="openLightbox(0)">
+                    <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=600&q=80"
+                        alt="Hotel Exterior">
+                    <div class="gallery-overlay"><span class="gallery-title">Hotel Exterior</span></div>
+                </div>
+                <div class="gallery-item" data-category="rooms" onclick="openLightbox(1)">
+                    <img src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=600&q=80"
+                        alt="Luxury Bedroom">
+                    <div class="gallery-overlay"><span class="gallery-title">Luxury Bedroom</span></div>
+                </div>
+                <div class="gallery-item" data-category="dining" onclick="openLightbox(2)">
+                    <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=600&q=80"
+                        alt="Restaurant">
+                    <div class="gallery-overlay"><span class="gallery-title">Multi-Cuisine Restaurant</span></div>
+                </div>
+                <div class="gallery-item" data-category="facility" onclick="openLightbox(3)">
+                    <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=600&q=80"
+                        alt="Reception Desk">
+                    <div class="gallery-overlay"><span class="gallery-title">Reception Counter</span></div>
+                </div>
+                <div class="gallery-item" data-category="facility" onclick="openLightbox(4)">
+                    <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=600&q=80"
+                        alt="Lobby Lounge">
+                    <div class="gallery-overlay"><span class="gallery-title">Lobby Lounge</span></div>
+                </div>
+                <div class="gallery-item" data-category="facility" onclick="openLightbox(5)">
+                    <img src="https://images.unsplash.com/photo-1517502884422-41eaead166d4?auto=format&fit=crop&w=600&q=80"
+                        alt="Conference Room">
+                    <div class="gallery-overlay"><span class="gallery-title">Conference Room</span></div>
+                </div>
+                <div class="gallery-item" data-category="rooms" onclick="openLightbox(6)">
+                    <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=600&q=80"
+                        alt="Bathroom">
+                    <div class="gallery-overlay"><span class="gallery-title">En-Suite Bathroom</span></div>
+                </div>
+                <div class="gallery-item" data-category="dining" onclick="openLightbox(7)">
+                    <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=600&q=80"
+                        alt="Delicious Food">
+                    <div class="gallery-overlay"><span class="gallery-title">Delightful Cuisine</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding testimonials">
+        <div class="container">
+            <div style="text-align: center;">
+                <span class="subtitle-gold">GUEST EXPERIENCES</span>
+                <h2 class="section-heading">What Our Guests Say</h2>
+                <p class="section-description" style="margin: 0 auto;">Real experiences from happy guests who stayed at
+                    Hotel Royal Residency.</p>
+            </div>
+
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="guest-info">
+                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=150&q=80"
+                            alt="Priya Sharma" class="guest-avatar">
+                        <div>
+                            <div class="guest-name">Priya Sharma</div>
+                            <div class="star-rating">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                    class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                    class="fa-solid fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="quote-text">"Excellent stay! The rooms were clean, spacious and the staff was very polite.
+                        Highly recommended for family trips in Maharajganj."</p>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="guest-info">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80"
+                            alt="Rohit Verma" class="guest-avatar">
+                        <div>
+                            <div class="guest-name">Rohit Verma</div>
+                            <div class="star-rating">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                    class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                    class="fa-solid fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="quote-text">"Great food, comfortable rooms and a peaceful location. Will definitely visit
+                        again whenever I am in Uttar Pradesh."</p>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="guest-info">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=150&q=80"
+                            alt="Anjali Singh" class="guest-avatar">
+                        <div>
+                            <div class="guest-name">Anjali Singh</div>
+                            <div class="star-rating">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                    class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                    class="fa-solid fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="quote-text">"Perfect place for business trips. The service and hospitality were top-notch,
+                        and Wi-Fi speed was reliable throughout my visit."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding" id="location" style="background-color: var(--bg-white);">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 30px;">
+                <span class="subtitle-gold">FIND US</span>
+                <h2 class="section-heading">Location & Surroundings</h2>
+                <p class="section-description" style="margin: 0 auto;">Conveniently located in Maharajganj with easy
+                    access to local markets and transportation.</p>
+            </div>
+
+            <div class="location-grid">
+                <div class="location-info-box">
+                    <div class="contact-detail-item">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <div>
+                            <h4>Address</h4>
+                            <p>Hotel Royal Residency, Main Road, Maharajganj, Uttar Pradesh 273303, India</p>
+                        </div>
+                    </div>
+                    <div class="contact-detail-item">
+                        <i class="fa-solid fa-phone"></i>
+                        <div>
+                            <h4>Phone Number</h4>
+                            <p>+91 98765 43210 / +91 98765 43211</p>
+                        </div>
+                    </div>
+                    <div class="contact-detail-item">
+                        <i class="fa-solid fa-envelope"></i>
+                        <div>
+                            <h4>Email Address</h4>
+                            <p>info@royalresidency.in</p>
+                        </div>
+                    </div>
+
+                    <a href="https://maps.google.com" target="_blank" class="btn-gold" style="margin-top: 10px;">
+                        <i class="fa-solid fa-diamond-turn-right"></i> Get Directions
+                    </a>
+                </div>
+
+                <div class="map-container">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d56858.83547847959!2d83.5350438!3d27.1448834!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3996f849ffaa61ef%3A0x2db4e813a1a5b485!2sMaharajganj%2C%20Uttar%20Pradesh!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+                        allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-banner" id="contact">
+        <div class="container">
+            <div class="cta-box">
+                <h2 class="cta-title">Plan Your Perfect Stay</h2>
+                <p class="cta-text">Experience comfort, warm hospitality and unforgettable luxury moments at Hotel Royal
+                    Residency Maharajganj.</p>
+                <div class="cta-btns">
+                    <button class="btn-gold" onclick="openBookingModal('General')">Book Your Stay</button>
+                    <a href="tel:+919876543210" class="btn-outline-gold"
+                        style="border-color: var(--bg-white); color: var(--bg-white);">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dark Luxury Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <i class="fa-solid fa-crown"></i>
+                        <div class="logo-text">
+                            <span class="brand-title">HOTEL ROYAL RESIDENCY</span>
+                            <span class="brand-sub">Maharajganj</span>
+                        </div>
+                    </div>
+                    <p>Offering luxury stays, delicious dining, and standard-setting hospitality in Maharajganj, Uttar
+                        Pradesh.</p>
+                    <div class="social-icons">
+                        <a href="#" class="social-btn"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="social-btn"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="social-btn"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="#" class="social-btn"><i class="fa-brands fa-x-twitter"></i></a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="footer-title">Contact Info</h4>
+                    <ul class="footer-links" style="gap: 14px;">
+                        <li><i class="fa-solid fa-location-dot"
+                                style="color: var(--gold-primary); margin-right: 8px;"></i> Maharajganj, Uttar Pradesh,
+                            India</li>
+                        <li><i class="fa-solid fa-phone" style="color: var(--gold-primary); margin-right: 8px;"></i> +91
+                            98765 43210</li>
+                        <li><i class="fa-solid fa-envelope" style="color: var(--gold-primary); margin-right: 8px;"></i>
+                            info@royalresidency.in</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="footer-title">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#rooms">Rooms</a></li>
+                        <li><a href="#facilities">Facilities</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
+                        <li><a href="#location">Location</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="footer-title">Our Policy</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Terms & Conditions</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Cancellation Policy</a></li>
+                        <li><a href="#">Help Center</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                &copy; 2026 Hotel Royal Residency, Maharajganj. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Booking Modal -->
+    <div class="modal" id="bookingModal">
+        <div class="modal-content">
+            <button class="close-modal" onclick="closeBookingModal()"><i class="fa-solid fa-xmark"></i></button>
+            <div class="modal-header">
+                <h3>Reserve Your Stay</h3>
+                <p style="font-size: 0.88rem; color: var(--text-muted);">Fill in your details below to place a room
+                    request.</p>
+            </div>
+            <form onsubmit="handleModalSubmit(event)">
+                <div class="form-group" style="margin-bottom: 14px;">
+                    <label>Selected Room Type</label>
+                    <select id="modalRoomType" class="form-control">
+                        <option value="Deluxe Room">Deluxe Room (₹2,500/night)</option>
+                        <option value="Executive Room">Executive Room (₹3,500/night)</option>
+                        <option value="Suite Room">Suite Room (₹5,500/night)</option>
+                        <option value="Family Room">Family Room (₹4,500/night)</option>
+                    </select>
+                </div>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 14px;">
+                    <div class="form-group">
+                        <label>Check In</label>
+                        <input type="date" id="modalCheckIn" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Check Out</label>
+                        <input type="date" id="modalCheckOut" class="form-control" required>
+                    </div>
+                </div>
+                <div class="form-group" style="margin-bottom: 14px;">
+                    <label>Full Name</label>
+                    <input type="text" placeholder="Enter your name" class="form-control" required>
+                </div>
+                <div class="form-group" style="margin-bottom: 20px;">
+                    <label>Phone Number</label>
+                    <input type="tel" placeholder="+91 XXXXX XXXXX" class="form-control" required>
+                </div>
+                <button type="submit" class="btn-gold" style="width: 100%;">Confirm Booking Request</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Notification Modal -->
+    <div class="modal" id="noticeModal">
+        <div class="modal-content" style="text-align: center;">
+            <button class="close-modal" onclick="closeNoticeModal()"><i class="fa-solid fa-xmark"></i></button>
+            <div
+                style="width: 60px; height: 60px; border-radius: 50%; background: rgba(200, 154, 69, 0.15); color: var(--gold-primary); font-size: 1.8rem; display: flex; align-items: center; justify-content: center; margin: 0 auto 16px auto;">
+                <i class="fa-solid fa-circle-check"></i>
+            </div>
+            <h3 id="noticeTitle" style="font-family: var(--font-heading); font-size: 1.5rem; margin-bottom: 10px;">
+                Booking Request Received!</h3>
+            <p id="noticeMessage" style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 24px;">Thank you!
+                We are checking availability for your selected dates and will call you back shortly.</p>
+            <button class="btn-gold" onclick="closeNoticeModal()" style="width: 100%;">Okay, Got It</button>
+        </div>
+    </div>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-btn lightbox-close" onclick="closeLightbox()"><i class="fa-solid fa-xmark"></i></button>
+        <button class="lightbox-btn lightbox-prev" onclick="changeLightboxImage(-1)"><i
+                class="fa-solid fa-chevron-left"></i></button>
+        <img src="" alt="Gallery Lightbox" class="lightbox-img" id="lightboxImg">
+        <button class="lightbox-btn lightbox-next" onclick="changeLightboxImage(1)"><i
+                class="fa-solid fa-chevron-right"></i></button>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" onclick="scrollToTop()">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
