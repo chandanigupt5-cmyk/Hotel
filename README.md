@@ -1,4 +1,7 @@
-# Hotel
-This is my first git Repository
+# Hotel Management
+
+This is my first Git repository.
+
 <br>
-Author Name chandani gupt
+Author Chandani Gupt
+Role Developer
